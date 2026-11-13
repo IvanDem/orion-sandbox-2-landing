@@ -1,28 +1,712 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#172b59" />
-    <title>ORION 2 Sandbox Game Landing Page</title>
-    <style>
-      html {
-        background: #172b59;
-      }
-
-      body {
-        box-sizing: border-box;
-        width: 100%;
-        min-height: max(100vh, 177.683vw);
-        min-height: max(100dvh, 177.683vw);
-        margin: 0;
-        background-color: #172b59;
-        background-image: url("./ORION%202%20Sandbox%20Game%20Landing%20Page.png");
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-      }
-    </style>
+    <meta name="theme-color" content="#18315e" />
+    <meta
+      name="description"
+      content="Explore alien worlds, craft your equipment, build a home, and take on dangerous creatures with friends in ORION 2 SANDBOX."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="ORION 2 SANDBOX — An adventure worth sharing"
+    />
+    <meta
+      property="og:description"
+      content="Explore. Craft. Build. Survive. Your next sandbox adventure, now with co-op."
+    />
+    <!-- Before publishing: add og:url, canonical, and an absolute HTTPS og:image (1200×630 JPG/PNG). -->
+    <title>ORION 2 SANDBOX — An adventure worth sharing</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site-config.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <svg
+      class="icon-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <path d="m8 4 13 8-13 8Z" fill="currentColor" stroke="none" />
+      </symbol>
+      <symbol id="icon-steam" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="11" fill="currentColor" stroke="none" />
+        <g fill="none" stroke="var(--icon-detail, #fff7e8)" stroke-width="1.8">
+          <circle cx="16" cy="7.5" r="3.1" />
+          <circle cx="7.4" cy="16.6" r="2.7" />
+          <path d="m1.5 13 6.8 3.6m1.5-2.2 3.7-5m-3.4 7.2 6-6" />
+        </g>
+      </symbol>
+      <symbol id="icon-window" viewBox="0 0 24 24">
+        <path
+          d="M2 5 11 4v7H2Zm11-1 9-2v9h-9ZM2 13h9v7l-9-1Zm11 0h9v9l-9-2Z"
+          fill="currentColor"
+          stroke="none"
+        />
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="2" />
+        <path d="M7 2v6m10-6v6M3 11h18" />
+      </symbol>
+      <symbol id="icon-download" viewBox="0 0 24 24">
+        <path d="M12 2v13m-5-5 5 5 5-5M3 16v5h18v-5" />
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="m9 5 7 7-7 7" />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path d="m5 5 14 14M5 19 19 5" />
+      </symbol>
+      <symbol id="icon-star" viewBox="0 0 32 32">
+        <path
+          d="m16 1 4.2 10.8L31 16l-10.8 4.2L16 31l-4.2-10.8L1 16l10.8-4.2Z"
+          fill="currentColor"
+          stroke="none"
+        />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="nav-shell container">
+        <a
+          class="brand brand--small"
+          href="#"
+          aria-label="ORION 2 SANDBOX, home"
+          ><img
+            src="assets/images/logo.png"
+            width="1280"
+            height="720"
+            alt="ORION 2 SANDBOX"
+            decoding="async"
+        /></a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Open navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+          <a href="#features">Features</a><a href="#trailer">Trailer</a
+          ><a href="#screenshots">Screenshots</a
+          ><a href="#press-kit">Press Kit</a>
+        </nav>
+        <a
+          class="button button--gold header-cta"
+          data-link="steam"
+          aria-disabled="true"
+          ><svg class="icon"><use href="#icon-steam" /></svg
+          ><span data-label>Coming to Steam</span></a
+        >
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-sky" aria-hidden="true"></div>
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <h1 id="hero-title" class="brand brand--hero">
+              <img
+                src="assets/images/logo.png"
+                width="1280"
+                height="720"
+                alt="ORION 2 SANDBOX"
+                decoding="async"
+              />
+            </h1>
+            <p class="hero-headline">
+              The long-awaited sequel to one of the best 2D crafting games,<br /><mark
+                >now with co-op!</mark
+              >
+            </p>
+            <p class="hero-description">
+              Explore alien planets, gather resources, craft equipment, build
+              your base, and fight dangerous creatures with friends.
+            </p>
+            <div class="button-row">
+              <button class="button button--cream" type="button" data-trailer>
+                <svg class="icon"><use href="#icon-play" /></svg>Watch Trailer
+              </button>
+              <a
+                class="button button--gold"
+                data-link="steam"
+                aria-disabled="true"
+                ><svg class="icon"><use href="#icon-steam" /></svg
+                ><span data-label>Coming to Steam</span></a
+              >
+            </div>
+            <ul class="game-facts" aria-label="Game information">
+              <li>
+                <svg class="icon"><use href="#icon-window" /></svg>PC
+              </li>
+              <li>
+                <svg class="icon"><use href="#icon-steam" /></svg>Steam
+              </li>
+              <li>
+                <img
+                  class="icon"
+                  src="assets/images/icon-coop.png"
+                  width="300"
+                  height="300"
+                  alt=""
+                  aria-hidden="true"
+                  decoding="async"
+                />Co-op
+              </li>
+              <li>
+                <svg class="icon"><use href="#icon-calendar" /></svg>TBA
+              </li>
+            </ul>
+          </div>
+          <div class="hero-art">
+            <img
+              src="assets/images/sky-heroes.png"
+              width="931"
+              height="1012"
+              alt="Two explorers ready for an adventure on a colorful alien planet"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+        <img
+          class="hero-grass hero-grass--left"
+          src="assets/images/sky_grass_front_l.png"
+          width="409"
+          height="330"
+          alt=""
+          aria-hidden="true"
+          decoding="async"
+        />
+        <img
+          class="hero-grass hero-grass--right"
+          src="assets/images/sky_grass_front_r.png"
+          width="298"
+          height="280"
+          alt=""
+          aria-hidden="true"
+          decoding="async"
+        />
+        <svg
+          class="section-wave"
+          viewBox="0 0 1440 80"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M0 38C180 4 250 94 490 42S810 12 1010 43 1270 8 1440 35V80H0Z"
+          />
+        </svg>
+      </section>
+
+      <section
+        class="features section-cream"
+        id="features"
+        aria-labelledby="features-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="features-title">
+              <svg class="spark"><use href="#icon-star" /></svg>Features<svg
+                class="spark"
+              >
+                <use href="#icon-star" />
+              </svg>
+            </h2>
+            <p>A bigger, richer, and more social sandbox adventure.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <img
+                src="assets/images/feature-worlds.png"
+                alt="A ringed planet above a lush alien landscape"
+                width="640"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="feature-content">
+                <h3>
+                  <img
+                    class="icon"
+                    src="assets/images/icon-explore.png"
+                    width="300"
+                    height="300"
+                    alt=""
+                    aria-hidden="true"
+                    decoding="async"
+                  />Explore Alien Worlds
+                </h3>
+                <p>
+                  Discover diverse planets, unique biomes, hidden secrets, and
+                  valuable resources.
+                </p>
+              </div>
+            </article>
+            <article class="feature-card">
+              <img
+                src="assets/images/feature-crafting.png"
+                alt="An illuminated crafting station in a futuristic workshop"
+                width="640"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="feature-content">
+                <h3>
+                  <img
+                    class="icon"
+                    src="assets/images/icon-craft.png"
+                    width="300"
+                    height="300"
+                    alt=""
+                    aria-hidden="true"
+                    decoding="async"
+                  />Craft &amp; Build
+                </h3>
+                <p>
+                  Gather materials, craft powerful equipment, and build your own
+                  base — from a simple shelter to a high-tech outpost.
+                </p>
+              </div>
+            </article>
+            <article class="feature-card">
+              <img
+                src="assets/images/feature-combat.png"
+                alt="A glowing alien creature in a purple cave"
+                width="640"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="feature-content">
+                <h3>
+                  <img
+                    class="icon"
+                    src="assets/images/icon-fight.png"
+                    width="300"
+                    height="300"
+                    alt=""
+                    aria-hidden="true"
+                    decoding="async"
+                  />Fight Dangerous Creatures
+                </h3>
+                <p>
+                  Face a variety of alien creatures, defend your base, and take
+                  on powerful bosses.
+                </p>
+              </div>
+            </article>
+            <article class="feature-card">
+              <img
+                src="assets/images/feature-coop.png"
+                alt="Two explorers meeting on an alien world"
+                width="640"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="feature-content">
+                <h3>
+                  <img
+                    class="icon"
+                    src="assets/images/icon-coop.png"
+                    width="300"
+                    height="300"
+                    alt=""
+                    aria-hidden="true"
+                    decoding="async"
+                  />Play in Co-op
+                </h3>
+                <p>
+                  Team up with friends, explore together, build bigger, and take
+                  on greater challenges as a crew.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="trailer-section"
+        id="trailer"
+        aria-labelledby="trailer-title"
+      >
+        <svg
+          class="section-wave section-wave--top"
+          viewBox="0 0 1440 64"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M0 30C160 3 260 62 480 30S800 22 1000 31 1250 0 1440 24V0H0Z"
+          />
+        </svg>
+        <div class="container trailer-layout">
+          <button
+            class="trailer-poster"
+            type="button"
+            data-trailer
+            aria-label="Play the ORION 2 SANDBOX trailer"
+          >
+            <img
+              src="assets/images/trailer-poster.png"
+              alt="ORION 2 SANDBOX trailer artwork"
+              width="1280"
+              height="720"
+              loading="lazy"
+              decoding="async"
+            /><span class="play-button"
+              ><svg class="icon"><use href="#icon-play" /></svg
+            ></span>
+          </button>
+          <div class="trailer-copy">
+            <span class="eyebrow">Official trailer</span>
+            <h2 id="trailer-title">Watch the Trailer</h2>
+            <p>
+              Get a first look at the worlds, crafting, combat, and co-op
+              adventures waiting for you in ORION 2 SANDBOX.
+            </p>
+            <button class="button button--cream" type="button" data-trailer>
+              <svg class="icon"><use href="#icon-play" /></svg>Watch Full
+              Trailer
+            </button>
+          </div>
+        </div>
+        <svg
+          class="section-wave"
+          viewBox="0 0 1440 64"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M0 32C170 8 240 62 470 31S800 20 1020 35 1260 9 1440 30V64H0Z"
+          />
+        </svg>
+      </section>
+
+      <section
+        class="screenshots section-cream"
+        id="screenshots"
+        aria-labelledby="screenshots-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="screenshots-title">
+              <svg class="spark"><use href="#icon-star" /></svg>Screenshots<svg
+                class="spark"
+              >
+                <use href="#icon-star" />
+              </svg>
+            </h2>
+            <p>
+              A glimpse at the worlds, building, and adventures in ORION 2
+              SANDBOX.
+            </p>
+          </div>
+          <div class="gallery" aria-label="Game image gallery">
+            <button
+              class="gallery-item"
+              type="button"
+              data-gallery="0"
+              aria-label="Enlarge image: A new world awaits"
+            >
+              <img
+                src="assets/images/screenshot-01.png"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+                alt="A new world awaits"
+              />
+            </button>
+            <button
+              class="gallery-item"
+              type="button"
+              data-gallery="1"
+              aria-label="Enlarge image: Make yourself at home"
+            >
+              <img
+                src="assets/images/screenshot-02.png"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+                alt="Make yourself at home"
+              />
+            </button>
+            <button
+              class="gallery-item"
+              type="button"
+              data-gallery="2"
+              aria-label="Enlarge image: Adventure beyond the surface"
+            >
+              <img
+                src="assets/images/screenshot-03.png"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+                alt="Adventure beyond the surface"
+              />
+            </button>
+            <button
+              class="gallery-item"
+              type="button"
+              data-gallery="3"
+              aria-label="Enlarge image: Build something extraordinary"
+            >
+              <img
+                src="assets/images/screenshot-04.png"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+                alt="Build something extraordinary"
+              />
+            </button>
+            <button
+              class="gallery-item"
+              type="button"
+              data-gallery="4"
+              aria-label="Enlarge image: Discover uncharted worlds"
+            >
+              <img
+                src="assets/images/screenshot-05.png"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+                alt="Discover uncharted worlds"
+              />
+            </button>
+          </div>
+          <div
+            class="gallery-paging"
+            role="group"
+            aria-label="Screenshot navigation"
+          ></div>
+        </div>
+      </section>
+
+      <section class="about section-cream" aria-labelledby="about-title">
+        <img
+          class="about-backdrop"
+          src="assets/images/base-back.png"
+          width="1600"
+          height="900"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="about-scenery" aria-hidden="true">
+          <div class="about-side about-side--left">
+            <img
+              class="about-art"
+              src="assets/images/base-art.png"
+              width="800"
+              height="600"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="about-side about-side--right">
+            <img
+              class="about-art"
+              src="assets/images/base-art-right.png"
+              width="800"
+              height="600"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+        <div class="container about-layout">
+          <div class="about-copy">
+            <h2 id="about-title">
+              <svg class="spark"><use href="#icon-star" /></svg>About ORION 2
+              SANDBOX
+            </h2>
+            <p>
+              ORION 2 SANDBOX is the long-awaited sequel to one of the best 2D
+              crafting games, bringing a bigger, deeper, and more social
+              experience. Embark on a cozy sci-fi adventure, craft, build,
+              explore uncharted worlds, and team up with friends in co-op!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="press-section"
+        id="press-kit"
+        aria-labelledby="press-title"
+      >
+        <div class="container press-panel">
+          <img
+            class="press-art"
+            src="assets/images/press-kit.png"
+            width="500"
+            height="360"
+            alt="Illustrated game artwork and a press folder"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="press-copy">
+            <h2 id="press-title">Press Kit</h2>
+            <p>
+              Media assets, key art, logos, and game information for
+              journalists, content creators, and partners.
+            </p>
+          </div>
+          <div class="press-actions">
+            <a
+              class="button button--gold"
+              data-link="pressKit"
+              aria-disabled="true"
+              ><svg class="icon"><use href="#icon-download" /></svg
+              ><span data-label>Download Press Kit</span></a
+            ><a
+              class="button button--cream"
+              data-link="steam"
+              aria-disabled="true"
+              ><svg class="icon"><use href="#icon-steam" /></svg
+              ><span data-label>Coming to Steam</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-layout">
+        <div class="footer-brands">
+          <a
+            class="brand brand--small"
+            href="#"
+            aria-label="ORION 2 SANDBOX, back to top"
+            ><img
+              src="assets/images/logo.png"
+              width="1280"
+              height="720"
+              alt="ORION 2 SANDBOX"
+              decoding="async" /></a
+          ><img
+            class="partner-logo"
+            src="assets/images/logo-y8.png"
+            width="378"
+            height="213"
+            alt="Y8"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="#features">Features</a><a href="#trailer">Trailer</a
+          ><a href="#screenshots">Screenshots</a
+          ><a href="#press-kit">Press Kit</a>
+        </nav>
+        <div class="social-links" role="group" aria-label="Follow ORION 2">
+          <a
+            class="social-link"
+            data-link="x"
+            role="link"
+            aria-label="X"
+            title="X"
+            aria-disabled="true"
+            ><img
+              src="assets/icons/x.svg"
+              width="28"
+              height="28"
+              alt=""
+              aria-hidden="true"
+              decoding="async" /></a
+          ><a
+            class="social-link"
+            data-link="discord"
+            role="link"
+            aria-label="Discord"
+            title="Discord"
+            aria-disabled="true"
+            ><img
+              src="assets/icons/discord.svg"
+              width="28"
+              height="28"
+              alt=""
+              aria-hidden="true"
+              decoding="async" /></a
+          ><a
+            class="social-link"
+            data-link="youtube"
+            role="link"
+            aria-label="YouTube"
+            title="YouTube"
+            aria-disabled="true"
+            ><img
+              src="assets/icons/youtube.svg"
+              width="28"
+              height="28"
+              alt=""
+              aria-hidden="true"
+              decoding="async"
+          /></a>
+        </div>
+        <p>© 2026 ORION 2 SANDBOX.<br />All rights reserved.</p>
+      </div>
+    </footer>
+
+    <dialog
+      class="media-dialog"
+      id="media-dialog"
+      aria-labelledby="media-title"
+    >
+      <div class="dialog-header">
+        <h2 id="media-title">ORION 2 SANDBOX</h2>
+        <button
+          class="icon-button"
+          type="button"
+          data-close
+          aria-label="Close media viewer"
+        >
+          <svg class="icon"><use href="#icon-close" /></svg>
+        </button>
+      </div>
+      <div id="media-content" class="media-content"></div>
+      <div class="gallery-controls" hidden>
+        <button
+          class="icon-button"
+          type="button"
+          data-previous
+          aria-label="Previous image"
+        >
+          <svg class="icon icon--back"><use href="#icon-arrow" /></svg></button
+        ><span id="gallery-counter" aria-live="polite"></span
+        ><button
+          class="icon-button"
+          type="button"
+          data-next
+          aria-label="Next image"
+        >
+          <svg class="icon"><use href="#icon-arrow" /></svg>
+        </button>
+      </div>
+    </dialog>
+    <noscript
+      ><p class="noscript-message">
+        The page is available without JavaScript. Enable JavaScript to open the
+        trailer and enlarge images.
+      </p></noscript
+    >
+  </body>
 </html>

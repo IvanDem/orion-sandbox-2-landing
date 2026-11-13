@@ -1,0 +1,10 @@
+{
+  "name": "orion-2-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Buildless ORION 2 SANDBOX landing page",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node --check app.js && node --check site-config.js && node --check scripts/serve.mjs"
+  }
+}

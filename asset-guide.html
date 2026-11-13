@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>ORION 2 — PNG для замены</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f5f7fb;
+        color: #172b4d;
+        font:
+          16px/1.55 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1240px;
+        margin: auto;
+        padding: 36px 24px 60px;
+      }
+      h1 {
+        font-size: clamp(26px, 4vw, 40px);
+        line-height: 1.15;
+        margin: 0 0 16px;
+      }
+      h2 {
+        margin: 38px 0 18px;
+        font-size: 24px;
+      }
+      h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        line-height: 1.35;
+      }
+      a {
+        color: #1659a9;
+      }
+      a:focus-visible {
+        outline: 3px solid #b97d00;
+        outline-offset: 4px;
+      }
+      .intro {
+        max-width: 900px;
+      }
+      .notice {
+        background: #fff2ce;
+        border-left: 4px solid #dca528;
+        padding: 16px 20px;
+        border-radius: 8px;
+        margin: 24px 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+      article {
+        background: white;
+        border: 1px solid #dce3ec;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .preview {
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e1eaf4;
+        background-image:
+          linear-gradient(45deg, #cbd7e7 25%, transparent 25%),
+          linear-gradient(-45deg, #cbd7e7 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #cbd7e7 75%),
+          linear-gradient(-45deg, transparent 75%, #cbd7e7 75%);
+        background-size: 24px 24px;
+        background-position:
+          0 0,
+          0 12px,
+          12px -12px,
+          -12px 0;
+      }
+      .preview img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        padding: 12px;
+      }
+      .body {
+        padding: 20px;
+      }
+      p {
+        margin: 10px 0;
+      }
+      code {
+        font:
+          14px/1.5 ui-monospace,
+          Consolas,
+          monospace;
+        overflow-wrap: anywhere;
+        background: #eef2f7;
+        padding: 3px 6px;
+        border-radius: 5px;
+      }
+      .file {
+        display: block;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .detail {
+        font-size: 14px;
+        color: #53637a;
+      }
+      .size {
+        font-weight: 700;
+      }
+      nav {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 25px 0;
+      }
+      nav a {
+        padding: 7px 12px;
+        border: 1px solid #cdd8e5;
+        border-radius: 20px;
+        background: white;
+        text-decoration: none;
+      }
+      footer {
+        margin-top: 40px;
+        border-top: 1px solid #d2dce9;
+        padding-top: 20px;
+      }
+      .number {
+        display: inline-block;
+        color: #8b6519;
+        background: #fff0c5;
+        padding: 2px 8px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      @media (max-width: 950px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 580px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        main {
+          padding: 24px 16px;
+        }
+        .preview {
+          height: 240px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>PNG: что и чем заменять</h1>
+      <p class="intro">
+        Все рабочие картинки — в <code>assets/images/</code>. Просто заменяй
+        нужный PNG своим файлом с тем же именем. Пути в коде уже настроены.
+        Шахматный фон обозначает прозрачность.
+      </p>
+      <div class="notice">
+        <strong>Без переименования путей:</strong> например, замени
+        <code>assets/images/feature-worlds.png</code> своим PNG. Сохрани
+        пропорции и обнови страницу. Размеры ниже — размеры текущих файлов.
+        Исходные SVG лежат отдельно в <code>assets/source-svg/</code> и не
+        используются страницей.
+      </div>
+      <nav aria-label="Разделы">
+        <a href="#section-0">Первый экран</a
+        ><a href="#section-1">Четыре карточки Features</a
+        ><a href="#section-2">Блок трейлера</a
+        ><a href="#section-3">Пять скриншотов Screenshots</a
+        ><a href="#section-4">Нижняя часть страницы</a
+        ><a href="#section-5">Значок вкладки</a>
+      </nav>
+      <section id="section-0">
+        <h2>Логотип и первый экран</h2>
+        <p>
+          Все четыре PNG подключены отдельно. Трава находится перед героями и
+          платформами, а нижний стык закрывает кремовая волна.
+        </p>
+        <div class="grid">
+          <article>
+            <a
+              class="preview"
+              href="assets/images/logo.png"
+              aria-label="Открыть logo.png"
+              ><img
+                src="assets/images/logo.png"
+                alt="Логотип ORION 2 SANDBOX"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">01</span>
+              <h3>Логотип</h3>
+              <code class="file">logo.png</code>
+              <p class="size">1280 × 720 px</p>
+              <p>
+                Используется в шапке, первом экране и подвале. Прозрачные поля
+                скрыты через CSS; PNG не изменён. Размеры: .brand--small,
+                .brand--hero.
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/sky.png"
+              aria-label="Открыть sky.png"
+              ><img
+                src="assets/images/sky.png"
+                alt="Небо и пейзаж"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">02</span>
+              <h3>Небо и пейзаж</h3>
+              <code class="file">sky.png</code>
+              <p class="size">1600 × 900 px</p>
+              <p>Неподвижный фон первого экрана.</p>
+              <p class="detail">
+                Подключено здесь:<br /><code>styles.css → .hero-sky</code>
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/sky-heroes.png"
+              aria-label="Открыть sky-heroes.png"
+              ><img
+                src="assets/images/sky-heroes.png"
+                alt="Герои и платформы"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">03</span>
+              <h3>Герои и платформы</h3>
+              <code class="file">sky-heroes.png</code>
+              <p class="size">931 × 1012 px</p>
+              <p>
+                Прозрачный слой справа от текста; на телефоне — под текстом.
+              </p>
+              <p class="detail">
+                Подключено здесь:<br /><code>index.html → .hero-art</code>
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/sky_grass_front_l.png"
+              aria-label="Открыть sky_grass_front_l.png"
+              ><img
+                src="assets/images/sky_grass_front_l.png"
+                alt="Передняя трава слева"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">04</span>
+              <h3>Передняя трава слева</h3>
+              <code class="file">sky_grass_front_l.png</code>
+              <p class="size">409 × 330 px</p>
+              <p>Прозрачный слой перед платформами у нижнего левого края.</p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → .hero-grass--left</code
+                >
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/sky_grass_front_r.png"
+              aria-label="Открыть sky_grass_front_r.png"
+              ><img
+                src="assets/images/sky_grass_front_r.png"
+                alt="Передняя трава справа"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">05</span>
+              <h3>Передняя трава справа</h3>
+              <code class="file">sky_grass_front_r.png</code>
+              <p class="size">298 × 280 px</p>
+              <p>Прозрачный слой перед платформами у нижнего правого края.</p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → .hero-grass--right</code
+                >
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="notice">
+          <strong>Как двигать:</strong> в <code>styles.css</code>, блок
+          <code>.hero</code>, меняй <code>--heroes-x</code>,
+          <code>--heroes-y</code>, <code>--grass-left-x</code> и
+          <code>--grass-right-x</code>. Плюс по X — вправо, минус — влево.
+          <code>--grass-bottom</code> задаёт отступ снизу. Слои не реагируют на
+          мышь; расположение адаптируется к ширине окна. Полный список — в
+          <a href="ASSETS.md">ASSETS.md</a>.
+        </div>
+        <p>
+          Старый <code>hero-art.png</code> — запасной плейсхолдер, сейчас не
+          используется.
+        </p>
+      </section>
+      <section id="section-1">
+        <h2>Четыре карточки Features</h2>
+        <div class="grid">
+          <article>
+            <a
+              class="preview"
+              href="assets/images/feature-worlds.png"
+              aria-label="Открыть feature-worlds.png"
+              ><img
+                src="assets/images/feature-worlds.png"
+                alt="1. Explore Alien Worlds — миры"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">06</span>
+              <h3>1. Explore Alien Worlds — миры</h3>
+              <code class="file">feature-worlds.png</code>
+              <p class="size">640 × 360 px</p>
+              <p>Картинка 16:9 без текста карточки.</p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → первая .feature-card</code
+                >
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/feature-crafting.png"
+              aria-label="Открыть feature-crafting.png"
+              ><img
+                src="assets/images/feature-crafting.png"
+                alt="2. Craft &amp; Build — крафт"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">07</span>
+              <h3>2. Craft &amp; Build — крафт</h3>
+              <code class="file">feature-crafting.png</code>
+              <p class="size">640 × 360 px</p>
+              <p>Картинка 16:9 без текста карточки.</p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → вторая .feature-card</code
+                >
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/feature-combat.png"
+              aria-label="Открыть feature-combat.png"
+              ><img
+                src="assets/images/feature-combat.png"
+                alt="3. Fight Dangerous Creatures — враги"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">08</span>
+              <h3>3. Fight Dangerous Creatures — враги</h3>
+              <code class="file">feature-combat.png</code>
+              <p class="size">640 × 360 px</p>
+              <p>Картинка 16:9 без текста карточки.</p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → третья .feature-card</code
+                >
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/feature-coop.png"
+              aria-label="Открыть feature-coop.png"
+              ><img
+                src="assets/images/feature-coop.png"
+                alt="4. Play in Co-op — совместная игра"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">09</span>
+              <h3>4. Play in Co-op — совместная игра</h3>
+              <code class="file">feature-coop.png</code>
+              <p class="size">640 × 360 px</p>
+              <p>Картинка 16:9 без текста карточки.</p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → четвёртая .feature-card</code
+                >
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="section-2">
+        <h2>Блок трейлера</h2>
+        <div class="grid">
+          <article>
+            <a
+              class="preview"
+              href="assets/images/trailer-poster.png"
+              aria-label="Открыть trailer-poster.png"
+              ><img
+                src="assets/images/trailer-poster.png"
+                alt="Постер трейлера с кнопкой Play"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">10</span>
+              <h3>Постер трейлера с кнопкой Play</h3>
+              <code class="file">trailer-poster.png</code>
+              <p class="size">1280 × 720 px</p>
+              <p>
+                Кнопка воспроизведения сделана кодом. Логотип уже встроен в
+                картинку постера; дополнительного слоя поверх нет.
+              </p>
+              <p class="detail">
+                Подключено здесь:<br /><code>index.html → .trailer-poster</code>
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/forest.png"
+              aria-label="Открыть forest.png"
+              ><img
+                src="assets/images/forest.png"
+                alt="Деревья по краям синей секции"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">11</span>
+              <h3>Деревья по краям синей секции</h3>
+              <code class="file">forest.png</code>
+              <p class="size">1600 × 700 px</p>
+              <p>Прозрачный фон. Синий цвет задаётся отдельно в CSS.</p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >styles.css → .trailer-section::before</code
+                >
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="section-3">
+        <h2>Пять скриншотов Screenshots</h2>
+        <div class="grid">
+          <article>
+            <a
+              class="preview"
+              href="assets/images/screenshot-01.png"
+              aria-label="Открыть screenshot-01.png"
+              ><img
+                src="assets/images/screenshot-01.png"
+                alt="Скриншот 1 — виден сначала на десктопе"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">12</span>
+              <h3>Скриншот 1 — виден сначала на десктопе</h3>
+              <code class="file">screenshot-01.png</code>
+              <p class="size">1280 × 720 px</p>
+              <p>
+                Всего 5. На десктопе видно 3, на телефоне 1. Тот же PNG
+                используется при увеличении.
+              </p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → data-gallery=&quot;0&quot;</code
+                >
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/screenshot-02.png"
+              aria-label="Открыть screenshot-02.png"
+              ><img
+                src="assets/images/screenshot-02.png"
+                alt="Скриншот 2 — виден сначала на десктопе"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">13</span>
+              <h3>Скриншот 2 — виден сначала на десктопе</h3>
+              <code class="file">screenshot-02.png</code>
+              <p class="size">1280 × 720 px</p>
+              <p>
+                Всего 5. На десктопе видно 3, на телефоне 1. Тот же PNG
+                используется при увеличении.
+              </p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → data-gallery=&quot;1&quot;</code
+                >
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/screenshot-03.png"
+              aria-label="Открыть screenshot-03.png"
+              ><img
+                src="assets/images/screenshot-03.png"
+                alt="Скриншот 3 — виден сначала на десктопе"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">14</span>
+              <h3>Скриншот 3 — виден сначала на десктопе</h3>
+              <code class="file">screenshot-03.png</code>
+              <p class="size">1280 × 720 px</p>
+              <p>
+                Всего 5. На десктопе видно 3, на телефоне 1. Тот же PNG
+                используется при увеличении.
+              </p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → data-gallery=&quot;2&quot;</code
+                >
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/screenshot-04.png"
+              aria-label="Открыть screenshot-04.png"
+              ><img
+                src="assets/images/screenshot-04.png"
+                alt="Скриншот 4 — доступен по стрелке"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">15</span>
+              <h3>Скриншот 4 — доступен по стрелке</h3>
+              <code class="file">screenshot-04.png</code>
+              <p class="size">1280 × 720 px</p>
+              <p>
+                Всего 5. На десктопе видно 3, на телефоне 1. Тот же PNG
+                используется при увеличении.
+              </p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → data-gallery=&quot;3&quot;</code
+                >
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/screenshot-05.png"
+              aria-label="Открыть screenshot-05.png"
+              ><img
+                src="assets/images/screenshot-05.png"
+                alt="Скриншот 5 — доступен по стрелке"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">16</span>
+              <h3>Скриншот 5 — доступен по стрелке</h3>
+              <code class="file">screenshot-05.png</code>
+              <p class="size">1280 × 720 px</p>
+              <p>
+                Всего 5. На десктопе видно 3, на телефоне 1. Тот же PNG
+                используется при увеличении.
+              </p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → data-gallery=&quot;4&quot;</code
+                >
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="section-4">
+        <h2>Нижняя часть страницы</h2>
+        <p>
+          Текст About расположен между островками; на узких экранах — над ними.
+          Фон позади островков имеет непрозрачность 5%.
+        </p>
+        <div class="grid">
+          <article>
+            <a class="preview" href="assets/images/logo-y8.png"
+              ><img src="assets/images/logo-y8.png" alt="Y8" loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">17</span>
+              <h3>Y8 в подвале</h3>
+              <code class="file">logo-y8.png</code>
+              <p class="size">378 × 213 px</p>
+              <p>Справа от логотипа игры. Размер на сайте — .partner-logo.</p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/base-back.png"
+              aria-label="Открыть base-back.png"
+              ><img
+                src="assets/images/base-back.png"
+                alt="Фон между островками"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">18</span>
+              <h3>Фон между островками</h3>
+              <code class="file">base-back.png</code>
+              <p class="size">1600 × 900 px</p>
+              <p>
+                Отдельный слой позади островков. Видимость 5%; настройка
+                --landscape-back-opacity в .about.
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/base-art.png"
+              aria-label="Открыть base-art.png"
+              ><img
+                src="assets/images/base-art.png"
+                alt="Домик в блоке About"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">19</span>
+              <h3>Домик в блоке About</h3>
+              <code class="file">base-art.png</code>
+              <p class="size">800 × 600 px</p>
+              <p>Прозрачный фон, без текста About.</p>
+              <p class="detail">
+                Подключено здесь:<br /><code>index.html → .about-art</code>
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/base-art-right.png"
+              aria-label="Открыть base-art-right.png"
+              ><img
+                src="assets/images/base-art-right.png"
+                alt="Правая часть пейзажа About"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">20</span>
+              <h3>Правая часть пейзажа About</h3>
+              <code class="file">base-art-right.png</code>
+              <p class="size">800 × 600 px</p>
+              <p>
+                Копия левого PNG для замены. Сохрани новое изображение под этим
+                именем; текущий размер 800 × 600.
+              </p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → .about-side--right .about-art</code
+                >
+              </p>
+            </div>
+          </article>
+          <article>
+            <a
+              class="preview"
+              href="assets/images/press-kit.png"
+              aria-label="Открыть press-kit.png"
+              ><img
+                src="assets/images/press-kit.png"
+                alt="Папка и карточки пресс-кита"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">21</span>
+              <h3>Папка и карточки пресс-кита</h3>
+              <code class="file">press-kit.png</code>
+              <p class="size">500 × 360 px</p>
+              <p>Прозрачный фон. Надписи и кнопки сделаны отдельно.</p>
+              <p class="detail">
+                Подключено здесь:<br /><code>index.html → .press-art</code>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="section-5">
+        <h2>Значок вкладки</h2>
+        <div class="grid">
+          <article>
+            <a
+              class="preview"
+              href="assets/images/favicon.png"
+              aria-label="Открыть favicon.png"
+              ><img
+                src="assets/images/favicon.png"
+                alt="Иконка браузерной вкладки"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">22</span>
+              <h3>Иконка браузерной вкладки</h3>
+              <code class="file">favicon.png</code>
+              <p class="size">64 × 64 px</p>
+              <p>PNG, квадратная картинка.</p>
+              <p class="detail">
+                Подключено здесь:<br /><code
+                  >index.html → link rel=&quot;icon&quot;</code
+                >
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section>
+        <h2>Иконки Features</h2>
+        <div class="grid">
+          <article>
+            <a class="preview" href="assets/images/icon-explore.png"
+              ><img
+                src="assets/images/icon-explore.png"
+                alt="explore"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">23</span>
+              <h3>explore</h3>
+              <code class="file">icon-explore.png</code>
+              <p class="size">300 × 300 px</p>
+              <p>Иконка в карточке Features.</p>
+            </div>
+          </article>
+          <article>
+            <a class="preview" href="assets/images/icon-craft.png"
+              ><img
+                src="assets/images/icon-craft.png"
+                alt="craft"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">24</span>
+              <h3>craft</h3>
+              <code class="file">icon-craft.png</code>
+              <p class="size">300 × 300 px</p>
+              <p>Иконка в карточке Features.</p>
+            </div>
+          </article>
+          <article>
+            <a class="preview" href="assets/images/icon-fight.png"
+              ><img
+                src="assets/images/icon-fight.png"
+                alt="fight"
+                loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">25</span>
+              <h3>fight</h3>
+              <code class="file">icon-fight.png</code>
+              <p class="size">300 × 300 px</p>
+              <p>Иконка в карточке Features.</p>
+            </div>
+          </article>
+          <article>
+            <a class="preview" href="assets/images/icon-coop.png"
+              ><img src="assets/images/icon-coop.png" alt="coop" loading="lazy"
+            /></a>
+            <div class="body">
+              <span class="number">26</span>
+              <h3>coop</h3>
+              <code class="file">icon-coop.png</code>
+              <p class="size">300 × 300 px</p>
+              <p>
+                Иконка в карточке Features; также в плашке Co-op первого экрана.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <footer>
+        <h2>Что остаётся в коде</h2>
+        <p>
+          Надписи, кнопки, волнистые разделители и маленькие иконки не нужно
+          включать в PNG. Они остаются HTML/CSS и встроенными в HTML векторами.
+        </p>
+        <p>
+          Превью трейлера, карточка co-op и первый скриншот пока похожи, но это
+          независимые PNG: заменяй каждый отдельно.
+        </p>
+        <p>
+          <a href="index.html">Открыть лендинг</a> ·
+          <a href="ASSETS.md">Таблица размеров</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
